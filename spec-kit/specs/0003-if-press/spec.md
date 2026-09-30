@@ -314,6 +314,10 @@ the work is aimed at that company eventually not needing Press at all.
 - **OQ-2**: No process is stated for whether Press retains any oversight
   of a company's claims-standard compliance after capability transfer is
   complete and the company owns its own voice.
+- **OQ-3**: No process is stated for who checks that
+  `www.intellectualfrontiers.com` or a registry profile has drifted out
+  of date, or how often. SC-012, SC-013, and SC-014 state the standard;
+  none of them names the mechanism that enforces it.
 
 ## Review & acceptance checklist
 
