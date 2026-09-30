@@ -170,6 +170,15 @@ the work is aimed at that company eventually not needing Press at all.
   design, or infrastructure. That work is rented capacity per the
   constitution's §7 ("Rented, not owned: engineering, design..."), not a
   Press function.
+- **FR-023**: Press MUST be responsible for the accuracy, voice, and
+  currency of written content Intellectual Frontiers submits to
+  third-party supplier and vendor registry profiles (for example
+  SAM.gov, the SBA small-business profile, Coupa.com), the same standard
+  FR-021 sets for `www.intellectualfrontiers.com`.
+- **FR-024**: Press MUST NOT be treated as owning a registry profile's
+  platform, fields, or process. Unlike the channels in "Owned channels,"
+  a registry profile is not one Press owns — the registry controls the
+  page; Press owns only the words entered into it.
 
 **Books as working AI**
 
@@ -227,6 +236,10 @@ the work is aimed at that company eventually not needing Press at all.
 - **The website** — `intellectualfrontiers.com`, a Press work format
   alongside a book. Press owns its words; Lovable and engineering own
   its code, design, and infrastructure.
+- **A registry profile** — a supplier or vendor listing on a third-party
+  platform (SAM.gov, the SBA small-business profile, Coupa.com, and
+  similar) where Press owns the written content but not the platform,
+  page, or process.
 
 ## Success criteria
 
@@ -267,6 +280,11 @@ the work is aimed at that company eventually not needing Press at all.
 - **SC-013**: A code, design, or infrastructure change to the site is
   never attributed to Press, and a wording, accuracy, or voice change is
   never attributed to Lovable or engineering.
+- **SC-014**: A supplier or vendor registry profile (SAM.gov, the SBA
+  small-business profile, Coupa.com, or similar) states the same facts,
+  in the same voice, as `www.intellectualfrontiers.com` and any current
+  Press-produced material — no profile contradicts or lags behind the
+  current record.
 
 ## Out of scope
 
@@ -280,6 +298,9 @@ the work is aimed at that company eventually not needing Press at all.
   never depend on it.
 - The website's code, design, build, and infrastructure — Lovable's and
   engineering's work, not Press's, per FR-022.
+- The registration process, fields, and platform mechanics of any
+  third-party supplier or vendor registry — the registry's own system,
+  not Press's, per FR-024.
 - The substantive content of any Fieldbook or founder-writing piece is
   Press's editorial work, not this spec's to govern — this spec only
   requires that the finished piece satisfy the claims standard and voice
@@ -327,6 +348,8 @@ the work is aimed at that company eventually not needing Press at all.
 | FR-017 | `0001-intellectual-frontiers/spec.md` FR-028 |
 | FR-018 – FR-020 | `context/units/press.md`, "Books as working AI, not just pages"; operational half in `if-press-prime`'s `spec-kit/spec.md` FR-027 – FR-031 |
 | FR-021, FR-022 | `context/units/press.md` ("The website is a Press work format"); constitution §7 ("Rented, not owned") |
+| FR-023, FR-024 | `context/units/press.md` ("Supplier and registry profile pages") |
 | SC-001 – SC-008 | Derived directly from FR-001 – FR-017 above |
 | SC-009 – SC-011 | Derived directly from FR-018 – FR-020 above |
 | SC-012, SC-013 | Derived directly from FR-021 – FR-022 above |
+| SC-014 | Derived directly from FR-023 – FR-024 above |

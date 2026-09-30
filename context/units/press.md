@@ -19,7 +19,8 @@
 > commitment recorded here first. "The website is a Press work format"
 > below was added directly by Shahid N. Shah on 2026-09-30, for the same
 > reason: not distilled from website content, a genuinely new commitment
-> recorded here first.
+> recorded here first. "Supplier and registry profile pages" below was
+> added directly by Shahid N. Shah the same day, for the same reason.
 
 **Job:** Understand markets and explain the truth clearly.
 
@@ -188,3 +189,16 @@ the build, the UI, or what the site runs on, only what the site says.
 This is the same boundary the rest of this page already draws between a
 form and its production mechanics: Press owns the words a format
 carries, whatever the format turns out to be.
+
+## Supplier and registry profile pages
+
+Press is responsible for all written public-facing content on
+third-party supplier and vendor registry profiles — SAM.gov, the SBA
+small-business profile, Coupa.com, and similar registries — the same
+standard it holds for `intellectualfrontiers.com` and for a Fieldbook:
+accuracy, voice, and keeping the profile current with the rest of the
+record.
+
+Unlike the channels in "Owned channels" above, a registry profile is not
+one Press owns. The registry controls the page, the platform, and the
+fields available to fill in. Press owns only what goes in them.
