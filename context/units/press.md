@@ -21,6 +21,8 @@
 > reason: not distilled from website content, a genuinely new commitment
 > recorded here first. "Supplier and registry profile pages" below was
 > added directly by Shahid N. Shah the same day, for the same reason.
+> "How Press keeps them current" below was added directly by Shahid N.
+> Shah the same day, for the same reason.
 
 **Job:** Understand markets and explain the truth clearly.
 
@@ -202,3 +204,18 @@ record.
 Unlike the channels in "Owned channels" above, a registry profile is not
 one Press owns. The registry controls the page, the platform, and the
 fields available to fill in. Press owns only what goes in them.
+
+## How Press keeps them current
+
+Press reviews `intellectualfrontiers.com` and every registry profile
+against the current record every quarter, whether or not anything looks
+wrong. A review also runs within ten business days of any fact a page
+states changing — a patent granted or abandoned, a unit's description,
+a leadership change, a correction issued under the correction policy
+above, or a legal or entity fact in `context/company.md`.
+
+Until a named individual Press lead exists, Shahid N. Shah holds this
+responsibility directly, the same default that applies everywhere else
+a unit's lead is unnamed. Each review is dated and recorded as passed or
+found-stale — the same discipline the correction policy already holds a
+published claim to.

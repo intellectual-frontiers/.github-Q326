@@ -179,6 +179,13 @@ the work is aimed at that company eventually not needing Press at all.
   platform, fields, or process. Unlike the channels in "Owned channels,"
   a registry profile is not one Press owns — the registry controls the
   page; Press owns only the words entered into it.
+- **FR-025**: Press MUST review `www.intellectualfrontiers.com` and
+  every registry profile against the current record on a quarterly
+  cadence, and additionally within ten business days of any fact a page
+  states changing (a patent's status, a unit's description, a
+  leadership change, a correction, or a fact in `context/company.md`).
+  Until a named individual Press lead exists, Shahid N. Shah holds this
+  responsibility directly.
 
 **Books as working AI**
 
@@ -240,6 +247,9 @@ the work is aimed at that company eventually not needing Press at all.
   platform (SAM.gov, the SBA small-business profile, Coupa.com, and
   similar) where Press owns the written content but not the platform,
   page, or process.
+- **A currency review** — a dated, recorded check of the website or a
+  registry profile against the current record; runs quarterly and
+  within ten business days of any fact change, per FR-025.
 
 ## Success criteria
 
@@ -285,6 +295,9 @@ the work is aimed at that company eventually not needing Press at all.
   in the same voice, as `www.intellectualfrontiers.com` and any current
   Press-produced material — no profile contradicts or lags behind the
   current record.
+- **SC-015**: Every quarterly review and every triggered review is dated
+  and recorded as passed or found-stale; no review cycle is skipped
+  silently.
 
 ## Out of scope
 
@@ -314,10 +327,11 @@ the work is aimed at that company eventually not needing Press at all.
 - **OQ-2**: No process is stated for whether Press retains any oversight
   of a company's claims-standard compliance after capability transfer is
   complete and the company owns its own voice.
-- **OQ-3**: No process is stated for who checks that
-  `www.intellectualfrontiers.com` or a registry profile has drifted out
-  of date, or how often. SC-012, SC-013, and SC-014 state the standard;
-  none of them names the mechanism that enforces it.
+- ~~**OQ-3**: no mechanism enforced website/registry currency.~~
+  **Resolved 2026-09-30** — Shahid set the review cadence and trigger
+  directly: quarterly plus within ten business days of a fact change.
+  See `context/units/press.md` ("How Press keeps them current") and
+  FR-025 / SC-015 above.
 
 ## Review & acceptance checklist
 
@@ -353,7 +367,9 @@ the work is aimed at that company eventually not needing Press at all.
 | FR-018 – FR-020 | `context/units/press.md`, "Books as working AI, not just pages"; operational half in `if-press-prime`'s `spec-kit/spec.md` FR-027 – FR-031 |
 | FR-021, FR-022 | `context/units/press.md` ("The website is a Press work format"); constitution §7 ("Rented, not owned") |
 | FR-023, FR-024 | `context/units/press.md` ("Supplier and registry profile pages") |
+| FR-025 | `context/units/press.md` ("How Press keeps them current") |
 | SC-001 – SC-008 | Derived directly from FR-001 – FR-017 above |
 | SC-009 – SC-011 | Derived directly from FR-018 – FR-020 above |
 | SC-012, SC-013 | Derived directly from FR-021 – FR-022 above |
 | SC-014 | Derived directly from FR-023 – FR-024 above |
+| SC-015 | Derived directly from FR-025 above |
