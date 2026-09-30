@@ -16,7 +16,10 @@
 > Shah on 2026-09-18, drafted by Claude working in `if-press-prime`
 > (Press's private production repo) at his direction, for the same
 > reason: not distilled from website content, a genuinely new
-> commitment recorded here first.
+> commitment recorded here first. "The website is a Press work format"
+> below was added directly by Shahid N. Shah on 2026-09-30, for the same
+> reason: not distilled from website content, a genuinely new commitment
+> recorded here first.
 
 **Job:** Understand markets and explain the truth clearly.
 
@@ -171,3 +174,17 @@ clinical trials, records and insurance evidence, payments and
 marketplaces, education and training) — and carries the evidence for its
 claims: named systems, dated numbers, and the constraint that made the
 problem hard.
+
+## The website is a Press work format
+
+A website is a Press work format beside books, and
+`intellectualfrontiers.com` is the first. Press is responsible for all
+written public-facing content on `www.intellectualfrontiers.com`: its
+accuracy, its voice, the audit step every piece already passes through,
+and what a visitor is told is new. Code, design, and the site's
+infrastructure belong to Lovable and to engineering — Press does not own
+the build, the UI, or what the site runs on, only what the site says.
+
+This is the same boundary the rest of this page already draws between a
+form and its production mechanics: Press owns the words a format
+carries, whatever the format turns out to be.

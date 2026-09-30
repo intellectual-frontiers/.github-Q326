@@ -159,6 +159,18 @@ the work is aimed at that company eventually not needing Press at all.
   than building its own internal team for one of these functions.
   (Restates 0001 FR-028.)
 
+**The website as a work format**
+
+- **FR-021**: Press MUST be responsible for the accuracy, voice, audit
+  step, and change-disclosure ("what a visitor is told is new") of every
+  written public-facing content on `www.intellectualfrontiers.com`, the
+  same way it is responsible for a Fieldbook's prose. A website is a
+  Press work format alongside a book, essay, or field guide.
+- **FR-022**: Press MUST NOT be treated as owning the site's code,
+  design, or infrastructure. That work is rented capacity per the
+  constitution's §7 ("Rented, not owned: engineering, design..."), not a
+  Press function.
+
 **Books as working AI**
 
 - **FR-018**: A Fieldbook that teaches an actionable method MUST make
@@ -212,6 +224,9 @@ the work is aimed at that company eventually not needing Press at all.
   judgment, taste, and skill in durable, inspectable, versioned form;
   what a reader's own Native Alpha, applied inward rather than at a
   market, finds ready to become.
+- **The website** — `intellectualfrontiers.com`, a Press work format
+  alongside a book. Press owns its words; Lovable and engineering own
+  its code, design, and infrastructure.
 
 ## Success criteria
 
@@ -245,6 +260,13 @@ the work is aimed at that company eventually not needing Press at all.
 - **SC-011**: "AI Workforce" and "Labor as Code" carry the same meaning
   everywhere they appear across Press's output; no piece redefines them
   locally.
+- **SC-012**: No written public-facing content on
+  `www.intellectualfrontiers.com` skips the audit step or claims
+  standard because it's "just the website" rather than a Fieldbook or
+  essay.
+- **SC-013**: A code, design, or infrastructure change to the site is
+  never attributed to Press, and a wording, accuracy, or voice change is
+  never attributed to Lovable or engineering.
 
 ## Out of scope
 
@@ -256,6 +278,8 @@ the work is aimed at that company eventually not needing Press at all.
 - Outside-coverage strategy (which journalists, which outlets) is
   operational detail; this spec only requires that Press's own account
   never depend on it.
+- The website's code, design, build, and infrastructure — Lovable's and
+  engineering's work, not Press's, per FR-022.
 - The substantive content of any Fieldbook or founder-writing piece is
   Press's editorial work, not this spec's to govern — this spec only
   requires that the finished piece satisfy the claims standard and voice
@@ -302,5 +326,7 @@ the work is aimed at that company eventually not needing Press at all.
 | FR-015, FR-016 | `context/units/press.md` ("Publishing as experimentation") |
 | FR-017 | `0001-intellectual-frontiers/spec.md` FR-028 |
 | FR-018 – FR-020 | `context/units/press.md`, "Books as working AI, not just pages"; operational half in `if-press-prime`'s `spec-kit/spec.md` FR-027 – FR-031 |
+| FR-021, FR-022 | `context/units/press.md` ("The website is a Press work format"); constitution §7 ("Rented, not owned") |
 | SC-001 – SC-008 | Derived directly from FR-001 – FR-017 above |
 | SC-009 – SC-011 | Derived directly from FR-018 – FR-020 above |
+| SC-012, SC-013 | Derived directly from FR-021 – FR-022 above |
