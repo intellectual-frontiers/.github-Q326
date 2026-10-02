@@ -15,6 +15,7 @@
 | `css/bundle.txt` | Cascade order for concatenation. |
 | `logos/`, `logos/web/` | Brand master PNGs and WebP sizes, light and dark. |
 | `images/` | Hero and diagram in WebP sizes, favicon, share card. |
+| `templating.md` | Reference for the template vocabulary (spec 0010). |
 | `data/registry.json` | The `app-*`, `data-app-*` and `if-*` names content may use (spec 0010). |
 | `data/navigation.json` | Primary nav, section menus and prefixes, breadcrumb parents, footer. |
 | `js/chrome.js` | Defines the `if-shelf` web component. The only script. |

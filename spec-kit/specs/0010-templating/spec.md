@@ -1,8 +1,7 @@
 # Feature Specification: Templating and layouts
 
-**Spec ID:** 0010-templating · **Constitution:** 1.2.1 · **Status:** In progress. The namespaces, registry, layouts, fragment responses and authored head elements (FR-001 to FR-011)
-are implemented; the templating constructs (FR-013 to FR-018, except `app-records` and `app-units`) and
-HTML layouts (FR-012) are specified and not yet built.
+**Spec ID:** 0010-templating · **Constitution:** 1.2.1 · **Status:** Implemented, except HTML layouts with slots (FR-012). The reference for authors is
+`design-system/templating.md`.
 **Governs:** content documents (spec 0008) and the layouts that frame them, on every Intellectual
 Frontiers web property.
 
