@@ -51,3 +51,10 @@ heading with an "All …" link; `.rows` ruled lists; `.cols--2|3|split` grids; `
 
 ## Content classes
 Content documents (spec 0008) may use only class names this CSS defines; the consumer lints them.
+
+## Layouts
+`<body data-app-layout="default|bare">` (spec 0010). With no `data-app-layout` there is no layout:
+the document is served as written. `default`: header, breadcrumb band where a trail exists, page,
+footer. `bare`: header, page, footer, with no breadcrumb band or section menu.
+`data-app-chrome="no-breadcrumbs no-header no-footer"` refines `default`.
+`data-app-as="fragment"` returns the rendered body content alone.

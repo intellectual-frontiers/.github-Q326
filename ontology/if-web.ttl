@@ -39,6 +39,11 @@ ifw:contentKind a owl:DatatypeProperty ; rdfs:range xsd:string .
 ifw:SitePath a rdfs:Datatype ; rdfs:comment "A site-relative path (/x), fragment (#x) or absolute http(s) URL, optionally with a query."@en .
 ifw:Slug a rdfs:Datatype ; rdfs:comment "Lowercase kebab-case identifier."@en .
 
+ifw:Page a owl:Class, sh:NodeShape ;
+    rdfs:subClassOf if:Page ;
+    rdfs:comment "An ordinary page. All of its content is HTML; the block only declares the type."@en ;
+    ifw:contentKind "Page" .
+
 ifw:HomePage a owl:Class, sh:NodeShape ;
     rdfs:subClassOf if:Page ;
     rdfs:comment "The home page. All of its content is HTML; the block only declares the type."@en ;

@@ -15,6 +15,7 @@
 | `css/bundle.txt` | Cascade order for concatenation. |
 | `logos/`, `logos/web/` | Brand master PNGs and WebP sizes, light and dark. |
 | `images/` | Hero and diagram in WebP sizes, favicon, share card. |
+| `data/registry.json` | The `app-*`, `data-app-*` and `if-*` names content may use (spec 0010). |
 | `data/navigation.json` | Primary nav, section menus and prefixes, breadcrumb parents, footer. |
 | `js/chrome.js` | Defines the `if-shelf` web component. The only script. |
 | `js/datastar.js` | Datastar bundle, loaded only by pages that need server-driven interactivity. |

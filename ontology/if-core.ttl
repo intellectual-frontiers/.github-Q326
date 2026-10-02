@@ -85,6 +85,11 @@ if:backing a owl:DatatypeProperty ; rdfs:domain if:ContentSource ; rdfs:range xs
 if:exposure a owl:DatatypeProperty ; rdfs:domain if:ContentSource ; rdfs:range xsd:string ;
     rdfs:comment "none | assets | all: what the /vfs proxy serves."@en .
 
+# Page layouts (spec 0010): the values of <body data-app-layout="…">.
+if:Layout a owl:Class ; rdfs:label "Layout"@en ;
+    rdfs:comment "A named page frame a content document can select."@en .
+if:layoutName a owl:DatatypeProperty ; rdfs:domain if:Layout ; rdfs:range xsd:string .
+
 # Web presence (concepts only; content shapes live in if-web.ttl).
 if:WebProperty a owl:Class ; rdfs:label "Web property"@en .
 if:Page a owl:Class ; rdfs:label "Page"@en .
@@ -265,3 +270,9 @@ if:SourceMedia a if:ContentSource ;
 if:SourceDs a if:ContentSource ;
     rdfs:label "Design system assets"@en ;
     if:mountName "ds" ; if:sourceKind "fs" ; if:backing "file:vendor/design-system" ; if:exposure "assets" .
+
+# Layouts. A document that names none gets no layout: it is served as written.
+if:LayoutDefault a if:Layout ; rdfs:label "Default layout"@en ; if:layoutName "default" ;
+    skos:definition "Header, breadcrumb band where a trail exists, page, footer."@en .
+if:LayoutBare a if:Layout ; rdfs:label "Bare layout"@en ; if:layoutName "bare" ;
+    skos:definition "Header, page, footer; no breadcrumb band and no section menu."@en .

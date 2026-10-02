@@ -34,15 +34,15 @@ checks, and the platform for everything else.
   `target="_blank"` MUST carry `rel="noopener"`.
 - **FR-008**: `class` values MUST be defined by the design system's CSS. An unknown class fails
   the file.
-- **FR-009**: Reusable parts MUST be web components with an `if-` prefix, in the light DOM. A
-  server component is expanded to design-system markup before it is sent. A client component
-  (a custom element defined in `js/chrome.js`) is sent as written and MUST work, as a plain
-  readable element, without script. Unknown `if-*` elements fail the file.
+- **FR-009**: Reusable parts MUST be custom elements in the light DOM, in the namespaces of spec
+  0010: `app-*` server components, expanded to design-system markup before anything is sent, and
+  `if-*` client web components, defined in `js/chrome.js`, sent as written and usable, as plain
+  readable elements, without script. Names not in the registry (`data/registry.json`) fail the file.
 
 ### Records
 - **FR-010**: A record (book, patent, paper, note, update, …) MUST be one HTML file at the URL it
   will have, typed by its shape. Lists on pages MUST reference records by `<a href>` children of
-  `<if-records kind="…">`. Every reference MUST resolve to a record of that kind at load time.
+  `<app-records kind="…">`. Every reference MUST resolve to a record of that kind at load time.
 - **FR-011**: Errors MUST name the file and the element or field.
 
 ### Everywhere
