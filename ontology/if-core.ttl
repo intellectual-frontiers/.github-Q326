@@ -1,0 +1,267 @@
+@prefix if:    <https://www.intellectualfrontiers.com/ontology/core#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+# Intellectual Frontiers — core ontology (PUBLIC).
+#
+# Seeded 2026-10-01 from spec-kit/memory/constitution.md (v1.2.1),
+# spec-kit/specs/0001..0006 and context/glossary.md in this repository.
+# It names things the company already says about itself; it adds no policy.
+# Where this file and the constitution disagree, the constitution governs and
+# this file is wrong.
+#
+# Inheritance: a downstream (private) ontology declares
+#   owl:imports <https://www.intellectualfrontiers.com/ontology/core> .
+# and may add classes, properties and individuals. It must not redefine or
+# remove anything declared here.
+
+<https://www.intellectualfrontiers.com/ontology/core>
+    a owl:Ontology ;
+    owl:versionInfo "0.1.0" ;
+    dcterms:title "Intellectual Frontiers core ontology" ;
+    dcterms:source <https://github.com/intellectual-frontiers/.github/blob/main/spec-kit/memory/constitution.md> ;
+    rdfs:comment "Public concepts of Intellectual Frontiers LLC: the company, its five units, the evidence chain, the decision checkpoint, its registers, and the SpecKit artifacts that govern them."@en .
+
+# ───────────────────────── Classes ─────────────────────────
+
+if:Organization a owl:Class ; rdfs:label "Organization"@en .
+if:Company a owl:Class ; rdfs:subClassOf if:Organization ; rdfs:label "Company"@en ;
+    rdfs:comment "The legal entity, Intellectual Frontiers LLC."@en .
+if:Unit a owl:Class ; rdfs:label "Business unit"@en ;
+    rdfs:comment "One of the five operating units. A unit has one job; no unit's activity proves another unit's claim (constitution §5, FR-002)."@en .
+if:Person a owl:Class ; rdfs:label "Person"@en .
+
+if:NativeAlpha a owl:Class ; rdfs:label "Native Alpha"@en ;
+    skos:definition "An unusual, disproportionate advantage that already exists and is strong enough to change a real decision. Only evidence proves it."@en .
+if:Thesis a owl:Class ; rdfs:label "Thesis"@en .
+if:Evidence a owl:Class ; rdfs:label "Evidence"@en .
+if:EvidenceKind a owl:Class ; rdfs:label "Evidence kind"@en ;
+    rdfs:comment "The taxonomy of what a unit's activity produces (constitution §6)."@en .
+if:Decision a owl:Class ; rdfs:label "Decision option"@en ;
+    rdfs:comment "One of the five honest options at the decision checkpoint."@en .
+if:EvidenceChainStage a owl:Class ; rdfs:label "Evidence chain stage"@en .
+
+if:Register a owl:Class ; rdfs:label "Register"@en ;
+    rdfs:comment "A generated or curated collection of records. Registers are cited, never restated (context/registers.md)."@en .
+if:ResearchArea a owl:Class ; rdfs:label "Research area"@en .
+if:ResearchPillar a owl:Class ; rdfs:label "Research pillar"@en .
+if:ResearchNote a owl:Class ; rdfs:label "Research note"@en .
+if:ResearchPaper a owl:Class ; rdfs:label "Research paper"@en .
+if:PatentFamily a owl:Class ; rdfs:label "Patent family"@en .
+if:DefensiveDisclosure a owl:Class ; rdfs:label "Defensive disclosure"@en .
+if:Book a owl:Class ; rdfs:label "Fieldbook or major work"@en .
+if:Fund a owl:Class ; rdfs:label "Fund"@en .
+if:Venture a owl:Class ; rdfs:label "Venture"@en .
+if:Hunt a owl:Class ; rdfs:label "Hunt"@en ;
+    rdfs:comment "A Network search with a written thesis and qualifying criteria."@en .
+if:EvidencePacket a owl:Class ; rdfs:label "Evidence packet"@en .
+
+# SpecKit artifacts, so the knowledge graph can say which spec governs what.
+if:Constitution a owl:Class ; rdfs:label "Constitution"@en .
+if:Spec a owl:Class ; rdfs:label "Specification"@en .
+if:Requirement a owl:Class ; rdfs:label "Requirement"@en ;
+    rdfs:comment "A testable MUST / MUST NOT / MAY statement inside a spec (e.g. FR-014)."@en .
+if:GlossaryTerm a owl:Class ; rdfs:label "Glossary term"@en .
+
+# Engineering strategy and spec policy.
+if:EngineeringStrategy a owl:Class ; rdfs:label "Engineering strategy"@en ;
+    rdfs:comment "A named way the company builds software."@en .
+if:SpecPolicy a owl:Class ; rdfs:label "Specification policy"@en ;
+    rdfs:comment "A rule about how specs themselves are written and kept."@en .
+
+# Content sources: the mounts of the virtual file system (spec 0009).
+if:ContentSource a owl:Class ; rdfs:label "Content source"@en ;
+    rdfs:comment "A named mount of the VFS: vfs://<mountName>/<path>."@en .
+if:mountName a owl:DatatypeProperty ; rdfs:domain if:ContentSource ; rdfs:range xsd:string ;
+    rdfs:comment "Lowercase [a-z0-9-], 1 to 63 characters; the authority of a vfs: URI."@en .
+if:sourceKind a owl:DatatypeProperty ; rdfs:domain if:ContentSource ; rdfs:range xsd:string ;
+    rdfs:comment "fs (a directory). Others (git, overlay) are added by their specs."@en .
+if:backing a owl:DatatypeProperty ; rdfs:domain if:ContentSource ; rdfs:range xsd:anyURI ;
+    rdfs:comment "Where the mount reads from, as a standard URI (file:relative/or/absolute, https:, s3:)."@en .
+if:exposure a owl:DatatypeProperty ; rdfs:domain if:ContentSource ; rdfs:range xsd:string ;
+    rdfs:comment "none | assets | all: what the /vfs proxy serves."@en .
+
+# Web presence (concepts only; content shapes live in if-web.ttl).
+if:WebProperty a owl:Class ; rdfs:label "Web property"@en .
+if:Page a owl:Class ; rdfs:label "Page"@en .
+
+# ───────────────────────── Properties ─────────────────────────
+
+if:hasUnit a owl:ObjectProperty ; rdfs:domain if:Company ; rdfs:range if:Unit ; rdfs:label "has unit"@en .
+if:unitOf a owl:ObjectProperty ; owl:inverseOf if:hasUnit ; rdfs:label "unit of"@en .
+if:question a owl:DatatypeProperty ; rdfs:domain if:Unit ; rdfs:range xsd:string ;
+    rdfs:comment "The question the unit exists to answer."@en .
+if:role a owl:DatatypeProperty ; rdfs:domain if:Unit ; rdfs:range xsd:string .
+if:evidenceProduced a owl:DatatypeProperty ; rdfs:domain if:Unit ; rdfs:range xsd:string ;
+    rdfs:comment "What the unit's activity produces as evidence."@en .
+if:shortName a owl:DatatypeProperty ; rdfs:range xsd:string .
+if:webPath a owl:DatatypeProperty ; rdfs:range xsd:string ;
+    rdfs:comment "Canonical path on www.intellectualfrontiers.com."@en .
+if:accentColor a owl:DatatypeProperty ; rdfs:domain if:Unit ; rdfs:range xsd:string ;
+    rdfs:comment "Unit identifier color token from design-system/tokens.json (never a flood)."@en .
+if:displayOrder a owl:DatatypeProperty ; rdfs:range xsd:integer .
+
+if:producesEvidenceOfKind a owl:ObjectProperty ; rdfs:domain if:Unit ; rdfs:range if:EvidenceKind .
+if:testsThesis a owl:ObjectProperty ; rdfs:domain if:Unit ; rdfs:range if:Thesis .
+if:resolvesTo a owl:ObjectProperty ; rdfs:domain if:Thesis ; rdfs:range if:Decision .
+if:governedBy a owl:ObjectProperty ; rdfs:range if:Spec ;
+    rdfs:comment "Which spec governs this thing."@en .
+if:specifiesRequirement a owl:ObjectProperty ; rdfs:domain if:Spec ; rdfs:range if:Requirement .
+if:tracesTo a owl:ObjectProperty ; rdfs:domain if:Requirement ;
+    rdfs:comment "A requirement traces to a constitution section or a unit spec."@en .
+if:definedIn a owl:ObjectProperty ; rdfs:comment "Where a term or fact is canonically defined."@en .
+if:publishedAt a owl:DatatypeProperty ; rdfs:range xsd:anyURI .
+
+# ───────────────────────── Individuals ─────────────────────────
+
+if:IntellectualFrontiersLLC a if:Company ;
+    rdfs:label "Intellectual Frontiers LLC"@en ;
+    if:webPath "/" ;
+    if:hasUnit if:IfResearchAndIp, if:IfPress, if:IfCapital, if:IfStudios, if:IfNetwork ;
+    skos:definition "Intellectual Frontiers is a think tank that builds things. We turn unusual ideas into publications, intellectual property, software, companies, and investments."@en ;
+    if:definedIn <https://github.com/intellectual-frontiers/.github/blob/main/spec-kit/specs/0001-intellectual-frontiers/spec.md> .
+
+if:IfResearchAndIp a if:Unit ;
+    rdfs:label "Intellectual Frontiers Research & IP"@en ;
+    if:shortName "Research & IP" ;
+    if:webPath "/ip" ;
+    if:displayOrder 1 ;
+    if:accentColor "ip" ;
+    if:question "What might be true?" ;
+    if:role "Turns observations into better questions, stronger theses, defensible insights, and tests. A patent is useful evidence, but it does not prove demand." ;
+    if:evidenceProduced "Research, technical distinctions, rights, and disconfirming findings" ;
+    if:governedBy if:Spec0002 .
+
+if:IfPress a if:Unit ;
+    rdfs:label "Intellectual Frontiers Press"@en ;
+    if:shortName "Press" ;
+    if:webPath "/press" ;
+    if:displayOrder 2 ;
+    if:accentColor "press" ;
+    if:question "Can anyone understand and use it?" ;
+    if:role "Makes a thesis inspectable, then tests it through attention, criticism, adoption, and willingness to pay." ;
+    if:evidenceProduced "Reader response, changed language, practical use, and paid demand" ;
+    if:governedBy if:Spec0003 .
+
+if:IfCapital a if:Unit ;
+    rdfs:label "Intellectual Frontiers Capital"@en ;
+    if:shortName "Capital" ;
+    if:webPath "/capital" ;
+    if:displayOrder 3 ;
+    if:accentColor "capital" ;
+    if:question "Should another dollar move?" ;
+    if:role "Tests the economics and searches for founders already pursuing the thesis. When someone else is better positioned, Capital can back them instead of rebuilding their work." ;
+    if:evidenceProduced "Underwriting, founder traction, capital interest, governance, and downside" ;
+    if:governedBy if:Spec0004 .
+
+if:IfStudios a if:Unit ;
+    rdfs:label "Intellectual Frontiers Studios"@en ;
+    if:shortName "Studios" ;
+    if:webPath "/studios" ;
+    if:displayOrder 4 ;
+    if:accentColor "studios" ;
+    if:question "What is the cheapest useful test?" ;
+    if:role "Builds an experiment when the evidence remains compelling and no better-positioned builder exists. A company is one possible result, not the starting instruction." ;
+    if:evidenceProduced "Customer behavior, usage, payment, renewal, and repeatable economics" ;
+    if:governedBy if:Spec0005 .
+
+if:IfNetwork a if:Unit ;
+    rdfs:label "Intellectual Frontiers Network"@en ;
+    if:shortName "Network" ;
+    if:webPath "/network" ;
+    if:displayOrder 5 ;
+    if:accentColor "network" ;
+    if:question "Who should we find, and why now?" ;
+    if:role "Connects every unit to founders, operators, customers, experts, partners, and investors. Finding that someone else is already doing the work can be the most valuable result." ;
+    if:evidenceProduced "Conversations, worked trials, introductions, capability, and absence" ;
+    if:governedBy if:Spec0006 .
+
+# Decision checkpoint (constitution §6). "Back someone else" is checked before "build it ourselves".
+if:DecisionContinue a if:Decision ; rdfs:label "Continue"@en ; if:displayOrder 1 .
+if:DecisionChange a if:Decision ; rdfs:label "Change"@en ; if:displayOrder 2 .
+if:DecisionBackSomeoneElse a if:Decision ; rdfs:label "Back someone else"@en ; if:displayOrder 3 .
+if:DecisionBuildItOurselves a if:Decision ; rdfs:label "Build it ourselves"@en ; if:displayOrder 4 .
+if:DecisionStop a if:Decision ; rdfs:label "Stop"@en ; if:displayOrder 5 .
+
+# Evidence taxonomy (constitution §6).
+if:IpEvidence a if:EvidenceKind ; rdfs:label "IP evidence"@en .
+if:AudienceEvidence a if:EvidenceKind ; rdfs:label "Audience evidence"@en .
+if:DemandEvidence a if:EvidenceKind ; rdfs:label "Demand evidence"@en .
+if:IfResearchAndIp if:producesEvidenceOfKind if:IpEvidence .
+if:IfPress if:producesEvidenceOfKind if:AudienceEvidence .
+if:IfStudios if:producesEvidenceOfKind if:DemandEvidence .
+
+# The evidence chain: Observation → Possible Native Alpha → Who cares → Cheapest credible test → Evidence.
+if:StageObservation a if:EvidenceChainStage ; rdfs:label "Observation"@en ; if:displayOrder 1 .
+if:StagePossibleNativeAlpha a if:EvidenceChainStage ; rdfs:label "Possible Native Alpha"@en ; if:displayOrder 2 .
+if:StageWhoCares a if:EvidenceChainStage ; rdfs:label "Who cares"@en ; if:displayOrder 3 .
+if:StageCheapestCredibleTest a if:EvidenceChainStage ; rdfs:label "Cheapest credible test"@en ; if:displayOrder 4 .
+if:StageEvidence a if:EvidenceChainStage ; rdfs:label "Evidence"@en ; if:displayOrder 5 .
+
+# Registers (context/registers.md).
+if:RegisterPatents a if:Register ; rdfs:label "Patents"@en ; if:webPath "/patents" .
+if:RegisterPatentSummaries a if:Register ; rdfs:label "Patent summaries"@en ; if:webPath "/patent-summaries" .
+if:RegisterTrademarks a if:Register ; rdfs:label "Trademarks"@en ; if:webPath "/trademarks" .
+if:RegisterDefensiveDisclosures a if:Register ; rdfs:label "Defensive disclosures"@en ; if:webPath "/defensive-disclosures" .
+if:RegisterResearchPillars a if:Register ; rdfs:label "Research pillars"@en ; if:webPath "/research" .
+if:RegisterResearchNotes a if:Register ; rdfs:label "Research notes"@en ; if:webPath "/research-notes" .
+if:RegisterResearchPapers a if:Register ; rdfs:label "Research papers"@en ; if:webPath "/research-papers" .
+if:RegisterPortfolio a if:Register ; rdfs:label "Portfolio"@en ; if:webPath "/portfolio" .
+if:RegisterTopics a if:Register ; rdfs:label "Topics"@en ; if:webPath "/topics" .
+if:RegisterWriting a if:Register ; rdfs:label "Writing"@en ; if:webPath "/blogs" .
+
+# Specs and the constitution.
+if:ConstitutionDoc a if:Constitution ; rdfs:label "Intellectual Frontiers Constitution"@en ;
+    owl:versionInfo "1.2.1" ;
+    if:definedIn <https://github.com/intellectual-frontiers/.github/blob/main/spec-kit/memory/constitution.md> .
+if:Spec0001 a if:Spec ; rdfs:label "0001 Intellectual Frontiers"@en ; if:tracesTo if:ConstitutionDoc .
+if:Spec0002 a if:Spec ; rdfs:label "0002 IF Research & IP"@en ; if:tracesTo if:Spec0001 .
+if:Spec0003 a if:Spec ; rdfs:label "0003 IF Press"@en ; if:tracesTo if:Spec0001 .
+if:Spec0004 a if:Spec ; rdfs:label "0004 IF Capital"@en ; if:tracesTo if:Spec0001 .
+if:Spec0005 a if:Spec ; rdfs:label "0005 IF Studios"@en ; if:tracesTo if:Spec0001 .
+if:Spec0006 a if:Spec ; rdfs:label "0006 IF Network"@en ; if:tracesTo if:Spec0001 .
+
+# The web property.
+if:WwwIntellectualFrontiers a if:WebProperty ;
+    rdfs:label "www.intellectualfrontiers.com"@en ;
+    if:publishedAt "https://www.intellectualfrontiers.com"^^xsd:anyURI .
+
+# Glossary terms that name structure (full prose stays in context/glossary.md).
+if:TermEvidenceChain a if:GlossaryTerm ; rdfs:label "The evidence chain"@en ; if:definedIn <https://github.com/intellectual-frontiers/.github/blob/main/context/glossary.md> .
+if:TermDecisionCheckpoint a if:GlossaryTerm ; rdfs:label "The decision checkpoint"@en ; if:definedIn <https://github.com/intellectual-frontiers/.github/blob/main/context/glossary.md> .
+if:TermSearchBeforeBuild a if:GlossaryTerm ; rdfs:label "Search before build"@en ; if:definedIn <https://github.com/intellectual-frontiers/.github/blob/main/context/glossary.md> .
+if:TermIndependenceTest a if:GlossaryTerm ; rdfs:label "The independence test"@en ; if:definedIn <https://github.com/intellectual-frontiers/.github/blob/main/context/glossary.md> .
+if:TermUnitBoundary a if:GlossaryTerm ; rdfs:label "Unit boundary"@en ; if:definedIn <https://github.com/intellectual-frontiers/.github/blob/main/context/glossary.md> .
+
+# Bare Metal Software: the engineering strategy for every Intellectual Frontiers web property.
+if:BareMetalSoftware a if:EngineeringStrategy ;
+    rdfs:label "Bare Metal Software"@en ;
+    skos:definition "Zero or very low dependencies and our own testable code: strict modern HTML5, modern CSS and modern JavaScript with web components and no framework, for everything everywhere. A library is admitted only for something small we do not know how to write, or large and standard, and each is recorded with its reason."@en ;
+    if:definedIn <https://github.com/intellectual-frontiers/.github/blob/main/context/glossary.md> ;
+    if:describedInBook if:BookBareMetalSoftware .
+if:BookBareMetalSoftware a if:Book ;
+    rdfs:label "Bare Metal Software"@en ;
+    if:webPath "/portfolio/bare-metal-software" .
+if:describedInBook a owl:ObjectProperty ; rdfs:domain if:EngineeringStrategy ; rdfs:range if:Book .
+if:WwwIntellectualFrontiers if:followsStrategy if:BareMetalSoftware .
+if:followsStrategy a owl:ObjectProperty ; rdfs:domain if:WebProperty ; rdfs:range if:EngineeringStrategy .
+
+# Specs hold only the latest truth and the future; Git holds history.
+if:SpecsHoldLatestAndFuture a if:SpecPolicy ;
+    rdfs:label "Specs hold the latest and the future, never history"@en ;
+    skos:definition "A spec states how things are and how they will be. It carries no change narration, dated sessions, changelogs or answered-question logs. History is Git: commit messages and git log -p. A pre-commit hook enforces it."@en .
+
+# VFS mounts of the website. A deployment can override a backing with IF_MOUNT_<NAME>.
+if:SourceSite a if:ContentSource ;
+    rdfs:label "Site content documents"@en ;
+    if:mountName "site" ; if:sourceKind "fs" ; if:backing "file:content" ; if:exposure "none" .
+if:SourceMedia a if:ContentSource ;
+    rdfs:label "Site media (covers and other images)"@en ;
+    if:mountName "media" ; if:sourceKind "fs" ; if:backing "file:static" ; if:exposure "assets" .
+if:SourceDs a if:ContentSource ;
+    rdfs:label "Design system assets"@en ;
+    if:mountName "ds" ; if:sourceKind "fs" ; if:backing "file:vendor/design-system" ; if:exposure "assets" .

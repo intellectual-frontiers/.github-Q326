@@ -1,0 +1,119 @@
+@prefix ifw:  <https://www.intellectualfrontiers.com/ontology/web#> .
+@prefix if:   <https://www.intellectualfrontiers.com/ontology/core#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix sh:   <http://www.w3.org/ns/shacl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+# Intellectual Frontiers — web content ontology and shapes (PUBLIC).
+#
+# Every shape here is BOTH an OWL class and a SHACL NodeShape. A content file is
+# an HTML5 document whose <head> carries one JSON-LD block (@context {"@vocab": ifw:},
+# @type = the shape name); the Rust site generates typed structs from these shapes at
+# build time (build.rs), so a block that does not match its shape fails the build,
+# naming the file and field: "Zod for content", tied to the ontology.
+#
+# Authoring conventions the generator understands (a deliberate SHACL subset):
+#   sh:path            camelCase field name (the local name of the IRI)
+#   sh:datatype        xsd:string | xsd:integer | xsd:boolean | xsd:date |
+#                      ifw:SitePath | ifw:Slug
+#   sh:node            nested shape
+#   sh:minCount 1      required; absent or 0 = optional
+#   sh:maxCount 1      scalar; absent = list
+#   sh:in ( ... )      closed vocabulary
+#   sh:minLength n     non-empty strings
+#   sh:order n         field order
+#   ifw:contentKind    marks a document-level shape (a content file's @type)
+# Anything outside this subset is ignored by the generator and flagged in CI.
+
+<https://www.intellectualfrontiers.com/ontology/web>
+    a owl:Ontology ;
+    owl:versionInfo "0.1.0" ;
+    owl:imports <https://www.intellectualfrontiers.com/ontology/core> ;
+    dcterms:title "Intellectual Frontiers web content ontology" .
+
+ifw:contentKind a owl:DatatypeProperty ; rdfs:range xsd:string .
+
+ifw:SitePath a rdfs:Datatype ; rdfs:comment "A site-relative path (/x), fragment (#x) or absolute http(s) URL, optionally with a query."@en .
+ifw:Slug a rdfs:Datatype ; rdfs:comment "Lowercase kebab-case identifier."@en .
+
+ifw:HomePage a owl:Class, sh:NodeShape ;
+    rdfs:subClassOf if:Page ;
+    rdfs:comment "The home page. All of its content is HTML; the block only declares the type."@en ;
+    ifw:contentKind "HomePage" .
+
+ifw:ResearchArea a owl:Class, sh:NodeShape ;
+    rdfs:subClassOf if:Page ;
+    rdfs:comment "A research area."@en ;
+    ifw:contentKind "ResearchArea" ;
+    sh:property [ sh:path ifw:title ; sh:order 1 ; sh:datatype xsd:string ; sh:minLength 1 ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path ifw:summary ; sh:order 2 ; sh:datatype xsd:string ; sh:minLength 1 ; sh:minCount 1 ; sh:maxCount 1 ] .
+
+ifw:ResearchPillar a owl:Class, sh:NodeShape ;
+    rdfs:subClassOf if:Page ;
+    rdfs:comment "A research pillar and the area it sits in."@en ;
+    ifw:contentKind "ResearchPillar" ;
+    sh:property [ sh:path ifw:title ; sh:order 1 ; sh:datatype xsd:string ; sh:minLength 1 ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path ifw:areaTitle ; sh:order 2 ; sh:datatype xsd:string ; sh:minLength 1 ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path ifw:areaHref ; sh:order 3 ; sh:datatype ifw:SitePath ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path ifw:noteCount ; sh:order 4 ; sh:datatype xsd:integer ; sh:minCount 1 ; sh:maxCount 1 ] .
+
+ifw:ResearchNote a owl:Class, sh:NodeShape ;
+    rdfs:subClassOf if:Page ;
+    rdfs:comment "A research note and, optionally, its pillar and area."@en ;
+    ifw:contentKind "ResearchNote" ;
+    sh:property [ sh:path ifw:title ; sh:order 1 ; sh:datatype xsd:string ; sh:minLength 1 ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path ifw:pillarTitle ; sh:order 2 ; sh:datatype xsd:string ; sh:minLength 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path ifw:pillarHref ; sh:order 3 ; sh:datatype ifw:SitePath ; sh:maxCount 1 ] ;
+    sh:property [ sh:path ifw:areaTitle ; sh:order 4 ; sh:datatype xsd:string ; sh:minLength 1 ; sh:maxCount 1 ] .
+
+ifw:Book a owl:Class, sh:NodeShape ;
+    rdfs:subClassOf if:Page ;
+    rdfs:comment "A fieldbook or major work. The slug is the last segment of the record's path."@en ;
+    ifw:contentKind "Book" ;
+    sh:property [ sh:path ifw:title ; sh:order 1 ; sh:datatype xsd:string ; sh:minLength 1 ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path ifw:subtitle ; sh:order 2 ; sh:datatype xsd:string ; sh:minLength 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path ifw:theme ; sh:order 3 ; sh:datatype xsd:string ; sh:minLength 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path ifw:tagline ; sh:order 4 ; sh:datatype xsd:string ; sh:minLength 1 ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path ifw:cover ; sh:order 5 ; sh:datatype ifw:SitePath ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path ifw:coverWidth ; sh:order 6 ; sh:datatype xsd:integer ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path ifw:coverHeight ; sh:order 7 ; sh:datatype xsd:integer ; sh:minCount 1 ; sh:maxCount 1 ] .
+
+ifw:PatentFamily a owl:Class, sh:NodeShape ;
+    rdfs:subClassOf if:Page ;
+    rdfs:comment "A patent family."@en ;
+    ifw:contentKind "PatentFamily" ;
+    sh:property [ sh:path ifw:status ; sh:order 1 ; sh:datatype xsd:string ; sh:minLength 1 ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path ifw:detail ; sh:order 2 ; sh:datatype xsd:string ; sh:minLength 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path ifw:title ; sh:order 3 ; sh:datatype xsd:string ; sh:minLength 1 ; sh:minCount 1 ; sh:maxCount 1 ] .
+
+ifw:Paper a owl:Class, sh:NodeShape ;
+    rdfs:subClassOf if:Page ;
+    rdfs:comment "A paper published elsewhere."@en ;
+    ifw:contentKind "Paper" ;
+    sh:property [ sh:path ifw:journal ; sh:order 1 ; sh:datatype xsd:string ; sh:minLength 1 ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path ifw:year ; sh:order 2 ; sh:datatype xsd:integer ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path ifw:title ; sh:order 3 ; sh:datatype xsd:string ; sh:minLength 1 ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path ifw:url ; sh:order 4 ; sh:datatype ifw:SitePath ; sh:minCount 1 ; sh:maxCount 1 ] .
+
+ifw:Opinion a owl:Class, sh:NodeShape ;
+    rdfs:subClassOf if:Page ;
+    rdfs:comment "A founder opinion piece published elsewhere."@en ;
+    ifw:contentKind "Opinion" ;
+    sh:property [ sh:path ifw:kind ; sh:order 1 ; sh:datatype xsd:string ; sh:minLength 1 ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path ifw:date ; sh:order 2 ; sh:datatype xsd:date ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path ifw:title ; sh:order 3 ; sh:datatype xsd:string ; sh:minLength 1 ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path ifw:url ; sh:order 4 ; sh:datatype ifw:SitePath ; sh:minCount 1 ; sh:maxCount 1 ] .
+
+ifw:Update a owl:Class, sh:NodeShape ;
+    rdfs:subClassOf if:Page ;
+    rdfs:comment "One What's new entry."@en ;
+    ifw:contentKind "Update" ;
+    sh:property [ sh:path ifw:date ; sh:order 1 ; sh:datatype xsd:date ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path ifw:kind ; sh:order 2 ; sh:datatype xsd:string ; sh:minLength 1 ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path ifw:area ; sh:order 3 ; sh:datatype xsd:string ; sh:minLength 1 ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path ifw:title ; sh:order 4 ; sh:datatype xsd:string ; sh:minLength 1 ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path ifw:summary ; sh:order 5 ; sh:datatype xsd:string ; sh:minLength 1 ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path ifw:href ; sh:order 6 ; sh:datatype ifw:SitePath ; sh:minCount 1 ; sh:maxCount 1 ] .
