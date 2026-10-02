@@ -227,7 +227,7 @@ custom consulting engagement.
 - **Companion Executable Source Code Repositories** — the reproducible
   science shared service; ideation-stage, not yet running.
 - **IPLG (Intellectual Product-Led Growth)** — the framework for making
-  Studios' work directly usable, shared with IF IP and summarized in
+  Studios' work directly usable, shared with IF Research & IP and summarized in
   `context/units/studios.md`.
 - **An experiment** — a prototype, small piece of software, manually
   delivered service, design partnership, open source project, or paid

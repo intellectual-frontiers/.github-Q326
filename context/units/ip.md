@@ -1,4 +1,4 @@
-# Intellectual Frontiers IP
+# Intellectual Frontiers Research & IP
 
 > **Status: canonical.** The job, color, question, "How the work runs,"
 > "Groups of work," and "The rule" sections below are distilled from
@@ -14,6 +14,19 @@
 > everything else in this file, not reproduced in full. "IP's real output"
 > below was added directly by Shahid N. Shah on 2026-09-14, not distilled
 > from any website content — see the constitution's amendment note.
+>
+> **Reconciled with Lovable commit `5688cba` on 2026-10-01.** The unit's
+> name, "Before protecting anything," and one sentence in "Turning research
+> into something usable" now track `src/content/corporate.ts`,
+> `src/content/doctrine.ts`, `src/content/operating-model.ts`,
+> `src/routes/ip.tsx`, and `src/content/iplg.ts` at that commit, which is
+> newer than the `6260a3b` and `adf0aef` text above.
+>
+> **Name.** Lovable renamed the unit from "Intellectual Frontiers IP" to
+> "Intellectual Frontiers Research & IP" (short form "Research & IP") on
+> 2026-09-27. "IP" stays in running text, in the `/ip` path, and in this
+> file's and the spec's names, the way Lovable's own page copy still uses
+> it.
 
 **Job:** Run the research and protect and commercialize what it produces.
 
@@ -26,7 +39,7 @@ that may create unusual advantage?
 
 ## IP's real output
 
-Despite the name, IF IP is not simply a patent operation. It is where an
+Despite the name, IF Research & IP is not simply a patent operation. It is where an
 observation becomes a hypothesis. Research covers strange corners of
 markets — technologies, workflows, IP, regulations, economics, operating
 experience, and the things everyone else takes for granted — and it's as
@@ -39,7 +52,7 @@ legal tests for patentability. That's a real signal, worth paying
 attention to — and still only a signal. A patent does not prove that
 anybody cares.
 
-So the useful output of IF IP is not "intellectual property." It's a
+So the useful output of IF Research & IP is not "intellectual property." It's a
 better question, a stronger thesis, a potentially defensible insight, or
 something worth testing. A patent, disclosure, or trademark is what
 sometimes follows once that thesis is worth protecting — not the goal
@@ -47,7 +60,7 @@ research was aimed at from the start.
 
 ## How the work runs
 
-IF IP does not start at the patent office. It starts with a research question
+IF Research & IP does not start at the patent office. It starts with a research question
 chosen on purpose, in a market where the firm can see the real workflow.
 Nothing in the register began as a patent idea. Each one began as a problem:
 how to reconcile monitor data against the chart, how a referral finds the
@@ -77,7 +90,7 @@ The wider estate includes software, public code repositories, invention
 records, methods, manuscripts, logos, domains, publication brands, and
 operating know-how. Patents, applications, copyrights, trademarks,
 common-law uses, domains, licenses, and trade secrets are tracked as
-different kinds of rights. IF IP never implies a registration or ownership
+different kinds of rights. IF Research & IP never implies a registration or ownership
 position that the record does not support.
 
 The patent register itself is generated from the USPTO rather than typed by
@@ -111,15 +124,65 @@ demand, and license economics.
 **Boundary:** a patent does not prove a venture, and does not force an
 investment — see the constitution's unit-boundary rule.
 
+## Before protecting anything
+
+IF Research & IP treats IP as a means, not the outcome. Most IP strategies
+start with an invention and ask whether it can be patented. This unit starts
+one step earlier: what unusual advantage has been found, why it matters, who
+would care, and what makes it hard to copy. Only then does it ask what to
+own, control, publish, license, or protect. Sometimes the answer is to
+protect nothing.
+
+Five questions come first:
+
+1. What unusual insight or advantage have we actually found?
+2. Who cares enough about it to spend money, time, reputation, access, or
+   another scarce resource?
+3. Is the advantage genuinely difficult to reproduce?
+4. What form of ownership or control would strengthen the advantage?
+5. Would protection create more value than publication, secrecy, speed, or
+   simply doing nothing?
+
+**When a patent is a moat:** a patent works as a moat only when two things
+are true at once: a workaround is impractical or expensive, and the holder
+can tell when someone is infringing. When either fails, the patent is a
+filing receipt and a published recipe. A patent can widen a moat that
+already exists; it cannot dig one where there is no operating advantage
+underneath. The advantage is more often problem framing, accumulated
+know-how, customer access, workflow position, proprietary data,
+implementation experience, trust, regulatory position, or distribution than
+the patent itself.
+
+**What can come out of the work:** patents, when exclusion rights strengthen
+a commercially meaningful advantage; trade secrets and know-how, when
+disclosure would make the advantage easier to reproduce; defensive
+disclosures, when keeping an idea open is worth more than owning it;
+research and publications; data and contractual rights; trademarks;
+licensing, when another organization is better positioned to commercialize
+the asset; new ventures; and investments, when the insight shows someone
+else is already building the right company and IF Capital should consider
+backing them instead. Studios does not automatically build everything that
+starts here.
+
+**Things this unit does not confuse with evidence:** a patent is not proof
+of customer demand, of freedom to operate, that infringement can be
+detected, or that enforcement is economical. A large market is not proof
+that this particular invention matters. Technical novelty is not proof of
+commercial value. An impressive inventor résumé is not proof that an
+invention deserves another dollar. IP earns its place when it changes a
+commercial decision.
+
 ## Turning research into something usable
 
-IPLG (Intellectual Product-Led Growth) is IF IP's name for a simple idea:
+IPLG (Intellectual Product-Led Growth) is IF Research & IP's name for a simple idea:
 for a firm whose product is knowledge rather than software, a research
 finding, a framework, or a prompt only earns attention once someone can
 actually use it, not just read about it. The loop is Content → Executable
 Content → a reader's action → evidence from that action → a better
 thesis → a better tool → a better relationship → a commercial
-opportunity, if one is warranted.
+opportunity, if one is warranted. A page view means a visitor found
+something interesting. A prompt copy means a visitor intends to use it. That
+difference matters.
 
 "Executable Content" is the mechanism: a prompt, worksheet, assessment,
 or scorecard that turns a research pillar or a framework into something a
@@ -133,8 +196,8 @@ value rather than precede it.
 
 ## Handling outside disclosures
 
-When someone outside the firm brings IF IP an invention, the intake rule
-is explicit: a non-confidential summary comes first, IF IP responds within
+When someone outside the firm brings IF Research & IP an invention, the intake rule
+is explicit: a non-confidential summary comes first, IF Research & IP responds within
 ten business days, and unsolicited confidential material is deleted
 unread. What comes out the other side is one of four outcomes: assignment,
 license, joint filing, or defensive publication.

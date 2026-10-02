@@ -1,6 +1,6 @@
 # Intellectual Frontiers — Constitution
 
-**Constitution version:** 1.2.0 · **Last amended:** 2026-09-14 · full
+**Constitution version:** 1.2.1 · **Last amended:** 2026-10-01 · full
 history at the bottom of this file, under Amendment process.
 
 > **Status: canonical.** This document is the source of truth for Intellectual
@@ -16,8 +16,16 @@ history at the bottom of this file, under Amendment process.
 > (2026-09-13). That version is the last point this text was copied from; this
 > file is the one to edit going forward. Note the two version numbers are
 > independent: "Founder's Doctrine v1.1" names the source text on the
-> website; "Constitution version 1.2.0" (above) tracks this file's own
+> website; "Constitution version 1.2.1" (above) tracks this file's own
 > history since, including amendments the website copy doesn't have yet.
+>
+> **Reconciled 2026-10-01** with the newer text of the same doctrine in
+> `src/content/doctrine.ts` at commit `5688cba` of the same Lovable repo.
+> The only doctrine wording that moved after `6260a3b` is the unit's name:
+> "IF IP" became "IF Research & IP" (and "IP" became "Research & IP" in
+> the job table, §5). §5 below now follows it. Nothing else in the
+> doctrine text changed, so every other section still tracks `6260a3b`
+> plus the 2026-09-14 amendments.
 >
 > **Amended 2026-09-14**, directly by Shahid N. Shah rather than distilled
 > from any website content: §6 gained the search-before-build sequencing,
@@ -179,7 +187,7 @@ already earned.
 
 | Unit | Job |
 | --- | --- |
-| IP | Run the research and protect and commercialize what it produces |
+| Research & IP | Run the research and protect and commercialize what it produces |
 | Press | Understand markets and explain the truth clearly |
 | Capital | Put money behind evidence with discipline |
 | Studios | Build the companies that should exist |
@@ -431,3 +439,4 @@ change: on evidence, openly, with the reasoning recorded.
 | 1.0.0 | 2026-09-13 | Initial distillation from Founder's Doctrine v1.1. |
 | 1.1.0 | 2026-09-14 | §6: search-before-build, the circulating-system rule, the evidence taxonomy, the decision checkpoint. §11: added "a capital deployment machine." §12: added the closing mission statement. |
 | 1.2.0 | 2026-09-14 | §7: "One shared-services layer, not five" — resolved `0001-intellectual-frontiers/spec.md` OQ-6. |
+| 1.2.1 | 2026-10-01 | §5: the unit formerly called "IP" is now "Research & IP" (full name "Intellectual Frontiers Research & IP"), matching Lovable commit `5688cba`. Wording only; no rule changed. |

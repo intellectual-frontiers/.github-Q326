@@ -23,7 +23,7 @@ partners, advisers, investors, founders, or other people to execute it.
 as Intellectual Frontiers or one of its units without an individual byline:
 unit pages, product copy, press releases, formal notices. Name the actual
 entity and keep it the active subject of the sentence: "Intellectual
-Frontiers stops when the evidence says stop." "IF IP checks freedom to
+Frontiers stops when the evidence says stop." "IF Research & IP checks freedom to
 operate before it licenses a patent." Never slide into passive voice to
 dodge picking a subject — passive voice is not a neutral substitute for a
 byline, it's a way of hiding who did what.

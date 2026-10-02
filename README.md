@@ -78,7 +78,7 @@ AI agent working in this repository specifically.
 
 - **The constitution** is governing doctrine, not testable requirements —
   principles, with a version number
-  ([1.2.0](spec-kit/memory/constitution.md) as of this writing) so a
+  ([1.2.1](spec-kit/memory/constitution.md) as of this writing) so a
   downstream spec can note what it was written against and re-check
   itself when the constitution changes.
 - **Context** ([`context/`](context/)) is the company's public account of
@@ -138,7 +138,7 @@ context/
   registers.md          what each public register is, and the rule for citing one
   glossary.md            defined terms used across context/ and spec-kit/
   units/
-    ip.md               Intellectual Frontiers IP
+    ip.md               Intellectual Frontiers Research & IP
     press.md            Intellectual Frontiers Press
     capital.md          Intellectual Frontiers Capital
     studios.md          Intellectual Frontiers Studios
@@ -155,7 +155,7 @@ spec-kit/
       spec.md            the company itself, specified: testable requirements,
                           success criteria, and open questions — not a plan
     0002-if-ip/
-      spec.md            IF IP, deepened from context/units/ip.md the same way
+      spec.md            IF Research & IP, deepened from context/units/ip.md the same way
     0003-if-press/
       spec.md            IF Press, deepened from context/units/press.md the same way
     0004-if-capital/
@@ -165,7 +165,7 @@ spec-kit/
     0006-if-network/
       spec.md            IF Network, deepened from context/units/network.md the same way
 assets/
-  logos/               corporate + 5 unit lockups + the core graphic alone, all transparent — see context/brand.md
+  logos/               the retired v1.3 corporate + 5 unit lockups + four-dot core graphic, all transparent — superseded 2026-09-18, see context/brand.md
   diagrams/            3 system diagrams — see spec-kit/specs/0001-intellectual-frontiers/spec.md
 ```
 

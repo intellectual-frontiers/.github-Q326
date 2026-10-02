@@ -38,16 +38,28 @@
   unit's claim: a patent doesn't prove a venture, a publication doesn't
   prove demand, Studio activity doesn't justify investment, investment
   doesn't prove product-market fit.
+- **Bare Metal Software** — the engineering strategy for Intellectual
+  Frontiers web properties: zero or very low dependencies and our own
+  testable code, with strict modern HTML5, modern CSS and modern JavaScript, web
+  components and no framework, for everything everywhere. A library is admitted only for something small we do not know
+  how to write, or large and standard, and is recorded with its reason.
+  Also the title of an IF Press book on software sovereignty.
+- **Specs hold the latest and the future** — the rule that a spec states how
+  things are and how they will be, and never carries history. History is
+  Git.
 
-## IF IP
+## IF Research & IP
 
+- **Research & IP** — the unit's name since the website renamed "IF IP" on
+  2026-09-27 (full name Intellectual Frontiers Research & IP). "IP" remains
+  in running text, in the `/ip` path, and in `context/units/ip.md`.
 - **Research area** — the top of IP's chain; groups related work.
 - **Research pillar** — a standing line of inquiry under a research area,
   with a stated question and recorded findings.
 - **Defensive disclosure** — a deliberate publication that keeps a method
   usable rather than excluding others from it — the opposite move from
   filing a patent on the same finding.
-- **IPLG (Intellectual Product-Led Growth)** — IF IP's model for turning
+- **IPLG (Intellectual Product-Led Growth)** — IF Research & IP's model for turning
   research and frameworks into things a reader can use directly
   (Executable Content) rather than only read about, so usage itself
   becomes evidence.
@@ -56,8 +68,8 @@
 
 ## IF Press
 
-- **A Fieldbook** — one of the four named books carrying the Intellectual
-  Frontiers Press imprint.
+- **A Fieldbook** — one of the named books carrying the Intellectual
+  Frontiers Press imprint, as listed in the books register on the website.
 - **The publishing evidence ladder** — silence, argument, adoption of
   terminology, and willingness to pay, in ascending order of how strongly
   each confirms a thesis.
