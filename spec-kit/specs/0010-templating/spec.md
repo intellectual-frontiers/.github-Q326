@@ -1,7 +1,7 @@
 # Feature Specification: Templating and layouts
 
 **Spec ID:** 0010-templating · **Constitution:** 1.2.1 · **Status:** In progress. The namespaces, registry, layouts, fragment responses and authored head elements (FR-001 to FR-011)
-are implemented; the templating constructs (FR-013 to FR-017, except `app-records` and `app-units`) and
+are implemented; the templating constructs (FR-013 to FR-018, except `app-records` and `app-units`) and
 HTML layouts (FR-012) are specified and not yet built.
 **Governs:** content documents (spec 0008) and the layouts that frame them, on every Intellectual
 Frontiers web property.
@@ -51,36 +51,57 @@ interpolation syntax.
 
 ## Templating
 
+Templating runs when content loads, over the whole store, and its output is the page body. A
+template is evaluated against a **current record**: the document's own record at the top level, the
+matched record inside `app-each`, and the included document's own record inside `app-include`.
+
 - **FR-013**: `<app-include src="…">` MUST replace itself with the children of the referenced
   document's `<body>`. `src` follows RFC 3986 relative-reference rules from the including document's
-  VFS URI (spec 0009), and only exposed mounts may be read. Depth is limited to 8 and a cycle fails the file.
-- **FR-014**: `<app-field name="…" [of="…"]>` MUST output one typed property of a record as
-  escaped text. `of` is a record URL; it defaults to the current record. The property MUST exist
-  in the record's shape.
-- **FR-015**: `<app-each kind="…" [where="…"] [sort="…"] [limit="…"]>` with one `<template>` child
-  MUST render the template once per matching record. Inside it, `app-field` refers to the current
-  record. `kind` names a content shape. `where` is one or more conditions joined by ` and `, each
-  `prop = 'v'`, `prop != 'v'` or `has prop`. `sort` is `prop` or `prop desc`; ties break by
-  record URL. `limit` is a positive integer.
-- **FR-016**: `data-app-if="<condition>"` on any element MUST keep the element only when the
-  condition holds for the current record. Conditions use the grammar of FR-013.
-- **FR-017**: `<app-records kind="…">` with `<a href>` children renders a curated list of records
-  in the order written; each href MUST resolve to a record of that kind. `<app-units>` renders the
+  VFS URI (spec 0009). The target MUST be a content document of the `Partial` or `Page` kind in the
+  content store; an include reads content, not files from other mounts. Depth is limited to 8 and a
+  cycle fails the file. The included body is expanded with the included document's own record as the
+  current record.
+- **FR-014**: `<app-field name="…" [of="…"]>` MUST output one scalar property of a record as
+  escaped text. `of` is a record URL; it defaults to the current record. `name` is a property of the
+  record's shape, or the pseudo-property `@url` (the record's URL) or `@kind` (its shape name). An
+  absent optional property outputs nothing. A property that is not a scalar (a list or nested shape)
+  fails the file.
+- **FR-015**: `data-app-bind-<attr>="<property>"` MUST set the HTML attribute `<attr>` on its element
+  from a property of the current record. `<attr>` is one of `href`, `src`, `alt`, `title`, `datetime`,
+  `width`, `height`. An absent optional property omits the attribute. For `href` and `src` the
+  property MUST be a URL-typed property or `@url`, so a bound URL is always one the content rules allow.
+- **FR-016**: Conditions use one grammar: one or more terms joined by ` and `, each `has <prop>`,
+  `<prop> = <value>` or `<prop> != <value>`, where `<value>` is a single-quoted string or an integer.
+  Comparison is typed: a string property compares with a string, an integer property with an integer,
+  a date with its ISO string. A mistyped comparison fails the file.
+- **FR-017**: `<app-each kind="…" [where="…"] [sort="…"] [limit="…"]>` with exactly one `<template>`
+  child MUST render the template once per matching record of that kind, inside which the current record
+  is the match. `where` is a condition (FR-016). `sort` is `<prop>` or `<prop> desc` over a scalar
+  property, with ties broken by record URL. `limit` is a positive integer. `<template>` is valid only
+  as the single child of `app-each`.
+- **FR-018**: `data-app-if="<condition>"` on any element MUST keep the element only when the condition
+  holds for the current record, and removes the attribute either way.
+- **FR-019**: `<app-records kind="…">` with `<a href>` children renders a curated list of records in
+  the order written; each href MUST resolve to a record of that kind. `<app-units>` renders the
   business units from the ontology.
-- **FR-018**: Templating MUST NOT provide scripting, arithmetic, user-defined functions or text
+- **FR-020**: Templating MUST NOT provide scripting, arithmetic, user-defined functions or text
   interpolation. All output is escaped.
-- **FR-019**: Every template reference (kind, property, type, slot, include, record) MUST be
-  checked against the ontology shapes and the store when content loads. Errors name the file and
-  the element.
-- **FR-020**: Every construct MUST be valid HTML5 and every file MUST still satisfy spec 0008.
+- **FR-021**: Every template reference (kind, property, type, include, record) MUST be checked against
+  the ontology shapes and the store when content loads, and all problems in a file reported together.
+  Errors name the file and the element.
+- **FR-022**: Every construct MUST be valid HTML5 and every file MUST still satisfy spec 0008.
 
 ## Success criteria
 - **SC-001**: A file with an unknown `app-*`, `data-app-*`, `if-*` or layout name is rejected.
 - **SC-002**: No rendered page, fragment or proxied document contains `app-` or `data-app-` markup.
 - **SC-003**: Each layout renders correctly at 375, 768, 1024 and 1440 px, and a document with no
   layout is served with none of our chrome, assets or scripts injected.
-- **SC-004**: An include cycle, an include deeper than 8, a field naming a property the shape lacks,
-  and a `where` or `sort` over a missing or mistyped property are each rejected at load.
+- **SC-004**: An include cycle, an include deeper than 8, an include of a missing document, a field or
+  binding naming a property the shape lacks or a non-scalar one, a bound `href` over a property that is not
+  a URL, a `where` or `sort` over a missing or mistyped property, and a stray `<template>` are each
+  rejected at load.
+- **SC-006**: `app-each` renders only matching records, in the requested order, up to the limit, and
+  `data-app-if` keeps or removes elements by the current record.
 - **SC-005**: A fragment response contains the body content and no `<html>`, `<head>` or chrome.
 
 ## Open questions

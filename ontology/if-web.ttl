@@ -122,3 +122,8 @@ ifw:Update a owl:Class, sh:NodeShape ;
     sh:property [ sh:path ifw:title ; sh:order 4 ; sh:datatype xsd:string ; sh:minLength 1 ; sh:minCount 1 ; sh:maxCount 1 ] ;
     sh:property [ sh:path ifw:summary ; sh:order 5 ; sh:datatype xsd:string ; sh:minLength 1 ; sh:minCount 1 ; sh:maxCount 1 ] ;
     sh:property [ sh:path ifw:href ; sh:order 6 ; sh:datatype ifw:SitePath ; sh:minCount 1 ; sh:maxCount 1 ] .
+
+ifw:Partial a owl:Class, sh:NodeShape ;
+    rdfs:subClassOf if:Page ;
+    rdfs:comment "A reusable piece of content, included into pages with <app-include>. It is not routed."@en ;
+    ifw:contentKind "Partial" .
