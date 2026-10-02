@@ -9,8 +9,9 @@
 > `src/routes/network/how-it-works.tsx` at commit `adf0aef` (2026-09-13),
 > the fuller Network content that landed on the live site after this
 > repository's first pass. Network is the fifth unit, added after the
-> doctrine's v1.0 and after the brand book's v1.3, but its lockup is no
-> longer missing — see [`context/brand.md`](../brand.md).
+> doctrine's v1.0 and after the brand book's v1.3. The per-unit lockups,
+> Network's included, were retired with the v1.3 mark on 2026-09-18 — see
+> [`context/brand.md`](../brand.md).
 >
 > **Every named "candidate" below is illustrative.** The source file says
 > so directly: "the named individuals in the evidence packets are
@@ -21,6 +22,14 @@
 > "Network runs through the whole system" below was added directly by
 > Shahid N. Shah on 2026-09-14, not distilled from any website content —
 > see the constitution's amendment note.
+>
+> **Reconciled with Lovable commit `5688cba` on 2026-10-01.** The unit's
+> short question and role (in `context/company.md`, "Operating
+> proposition"), "What the other four units need from Network," the closing
+> sentences of "Network runs through the whole system," and the obligation
+> in "Relationship memory" now track `src/content/operating-model.ts` and
+> `src/routes/network/index.tsx` at that commit, which is newer than the
+> text above. `src/content/network.ts` did not change after `6260a3b`.
 
 **Job:** Find and prove the people who can carry the work.
 
@@ -52,8 +61,21 @@ who did what and how it turned out, so the next search starts further along
 than the last one. Ask Network is how that record gets queried in plain
 language.
 
+Relationship memory carries an obligation: nothing from a private
+conversation shows up on a public page, and there is no public directory of
+people on the website.
+
 Counts published about a search are illustrative unless the packet says
 otherwise — and the packet says so in the same breath.
+
+## What the other four units need from Network
+
+The other four units are Network's customers. IF Research & IP needs
+reviewers who have fought with the failure a claim describes. Capital needs
+founders who may already be building the strongest expression of a thesis.
+Press needs contributors who have done what they write about. Studios needs
+customers, design partners, and operators who will own an outcome. Network
+runs those searches and returns the evidence.
 
 ## The rule
 
@@ -75,7 +97,8 @@ people are not a stage in a pipeline — they're everywhere. A researcher
 might introduce an observation. An operator might reveal a market
 problem. A founder might recognize an opportunity. A customer might
 become a design partner. A specialist might invalidate an assumption. An
-investor might expose an economic flaw. So Network isn't primarily a
+investor might expose an economic flaw, and a founder might bring a better
+thesis than the one the firm started with. So Network isn't primarily a
 database of résumés — the internet already holds enormous amounts of
 information about people. The harder, more valuable capability is knowing
 whom to find, when, why they matter, and how they connect to whatever the
@@ -90,10 +113,10 @@ alongside the firm's own balance sheet — see `context/units/capital.md`'s
 One of the most valuable things Network can tell the rest of the firm is
 that someone else is already doing the work a thesis called for. That can
 save years. If they're good, IF Capital can fund them. If they're close,
-Studios or Capital can partner with them. If they're wrong in an
-interesting way, that's still something to learn from. And if a search
-turns up nobody, that absence is itself evidence — see the constitution's
-search-before-build principle.
+the firm can partner with them. If they're wrong in an interesting way,
+that's still something to learn from. And if nobody is there after a
+serious search, that absence is itself evidence, and it may support a
+Studios experiment — see the constitution's search-before-build principle.
 
 ## How a search runs
 

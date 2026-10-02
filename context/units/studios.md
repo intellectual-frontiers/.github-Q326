@@ -16,6 +16,16 @@
 > "Studios is a last-mile capability" below was added directly by Shahid N.
 > Shah on 2026-09-14, not distilled from any website content — see the
 > constitution's amendment note.
+>
+> **Reconciled with Lovable commit `5688cba` on 2026-10-01.** The unit's
+> short question and role (in `context/company.md`, "Operating
+> proposition"), the added sentences in "Studios is a last-mile
+> capability," and "Operating companies" under "Two kinds of company" now
+> track `src/content/operating-model.ts`, `src/routes/studios/about.tsx`
+> (the page that carries the unit's charter after `/studios` became the
+> list of what Studios has built), `src/routes/studios/index.tsx`, and
+> `src/content/works/companies/*.ts` at that commit, which is newer than
+> the text above.
 
 **Job:** Build the companies that should exist.
 
@@ -71,6 +81,15 @@ able to build something in a week is not evidence that the week was worth
 spending. Customers provide better evidence than code. Usage beats a
 demonstration. Payment beats a compliment. A renewal beats a first
 payment. Repeatable economics beat all of them.
+
+Studios becomes important when the thesis is early, sits between
+categories, depends on a capability unusual to the firm, or has not
+attracted the right builder. Paid work beats pilots: a hospital that put a
+purchase order against an operating budget line has told Studios more than
+ten that signed a letter of intent, and a research site paying monthly
+tells it more than a free vendor pilot. A venture that cannot earn revenue
+against a real budget line gets closed early and cheaply. Studios does not
+charter ventures in markets nobody at the firm has operated in.
 
 Studios can also produce the evidence that makes Studios unnecessary. If
 an experiment proves the market exists and a better-positioned operator
@@ -146,7 +165,8 @@ independent yet.
 ## Two kinds of company
 
 Studios' portfolio holds two different kinds of thing, each with its own
-obligations, plus a third category shared services sit in.
+obligations, plus a third category shared services sit in. The website also
+lists a fourth, operating companies, described below.
 
 **A venture** is chartered as a company, not a project: its own entity,
 its own operator, a licensed rights position, and a closure condition
@@ -162,6 +182,10 @@ outside, it gets spun out rather than kept as an internal tool.
 A **shared service** sits between the two: built to stand alone, usable
 by every venture in the portfolio, and spun out if outside demand for it
 is strong enough.
+
+**Operating companies** are the established firms behind the work, listed
+with Studios on the website: delivery, regulated engineering, and revenue
+operations that the ventures draw on. They are not chartered ventures.
 
 ## Shared services
 
@@ -196,7 +220,7 @@ wherever it's mentioned.
 IPLG (Intellectual Product-Led Growth) is the framework behind how these
 services, and Studios' other output, turn into something a visitor can
 use directly rather than only read about — the same framework
-`context/units/ip.md` describes for IF IP's research. Studios' own
+`context/units/ip.md` describes for IF Research & IP's research. Studios' own
 version of it names the "executable actions" a visitor can take per unit
 (for IF Studios, things like turning a page into a Venture Architecture
 exercise, or becoming a design partner). Like everywhere else, it's held

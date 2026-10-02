@@ -1,4 +1,4 @@
-# Feature Specification: Intellectual Frontiers IP
+# Feature Specification: Intellectual Frontiers Research & IP
 
 **Spec ID:** 0002-if-ip
 **Constitution version:** 1.2.0
@@ -7,17 +7,17 @@
 **Decision authority:** Shahid N. Shah, for the company-wide reason
 tracked as OQ-5 on `0001-intellectual-frontiers` — no unit, IP included,
 has a named individual lead distinct from the founder yet.
-**Input:** Specify IF IP in spec-kit's spec shape, deepening
+**Input:** Specify IF Research & IP in spec-kit's spec shape, deepening
 `context/units/ip.md` and `context/registers.md` into testable
 requirements, the way `0001-intellectual-frontiers` deepened the
 constitution. No new policy invented here.
 
 ## Why this document exists
 
-`context/units/ip.md` states IF IP's charter in prose: the research chain,
+`context/units/ip.md` states IF Research & IP's charter in prose: the research chain,
 the groups of work, the rule that a patent still has to earn its
 commitment. This spec restates the checkable parts of that charter as
-requirements, and adds nothing IF IP's own documents don't already say.
+requirements, and adds nothing IF Research & IP's own documents don't already say.
 Where 0001 already states a rule that covers IP (FR-002, FR-006, FR-007,
 FR-008), this spec cites it rather than restating it, per
 `spec-kit/templates/spec-template.md`'s own instruction.
@@ -32,12 +32,12 @@ None yet.
 
 ## Primary scenario
 
-A research finding enters IF IP's chain as a question chosen on purpose,
+A research finding enters IF Research & IP's chain as a question chosen on purpose,
 in a market the firm can see the real workflow in — not as a patent idea
 looking for a justification. It moves through a research pillar, gets
 recorded in a paper or dated note, and at a defined trigger point receives
 an explicit disposition: patent, defensive disclosure, trade secret, or no
-action. Whatever the disposition, IF IP never represents a stronger rights
+action. Whatever the disposition, IF Research & IP never represents a stronger rights
 position than the record supports, and a granted right still has to clear
 the commercial questions before anyone treats it as more than a
 possibility.
@@ -45,13 +45,13 @@ possibility.
 ### Acceptance scenarios
 
 1. **Given** a workflow observation with no assigned research pillar,
-   **when** IF IP takes it up, **then** it is grouped under a research area
+   **when** IF Research & IP takes it up, **then** it is grouped under a research area
    and given a research pillar with a stated question, not filed directly
    as a patent idea.
 2. **Given** a research pillar has produced a finding capable of being
    protected, **when** a related paper or note is about to publish, or a
    related patent's priority-date deadline is approaching — whichever
-   comes first — **then** IF IP has already given the finding an explicit
+   comes first — **then** IF Research & IP has already given the finding an explicit
    disposition (patent, defensive disclosure, trade secret, or no action),
    per 0001's FR-007.
 3. **Given** a dated note records a finding, **when** it is published,
@@ -59,7 +59,7 @@ possibility.
    so a reader knows what kind of claim it makes.
 4. **Given** a patent has been granted, **when** anyone inside or outside
    the firm asks whether it justifies building, funding, or licensing
-   something, **then** IF IP answers with the commercial questions (what
+   something, **then** IF Research & IP answers with the commercial questions (what
    problem it solves now, who has authority and budget, what is owned or
    still needs verifying, whether it can be made more valuable, and which
    commercialization path fits) — not with the grant alone.
@@ -89,7 +89,7 @@ possibility.
 
 **Research chain**
 
-- **FR-001**: IF IP MUST group every research finding under a research
+- **FR-001**: IF Research & IP MUST group every research finding under a research
   area and a research pillar before treating it as protectable, rather
   than starting from a patent idea directly.
 - **FR-002**: A research pillar MUST have a stated question and a record
@@ -103,7 +103,7 @@ possibility.
 
 **Disposition**
 
-- **FR-005**: IF IP MUST give every protectable finding an explicit
+- **FR-005**: IF Research & IP MUST give every protectable finding an explicit
   disposition — patent, defensive disclosure, trade secret, or no action
   — no later than whichever comes first: a related paper or note
   publishing, or a related patent application's priority-date deadline.
@@ -111,7 +111,7 @@ possibility.
 - **FR-006**: A defensive disclosure MUST be a deliberate choice to keep a
   method usable, decided on its own terms — never a fallback taken because
   a patent filing deadline was missed.
-- **FR-007**: IF IP MUST NOT imply a registration or ownership position
+- **FR-007**: IF Research & IP MUST NOT imply a registration or ownership position
   that the underlying record does not support. (Restates 0001 FR-006.)
 
 **Registers**
@@ -120,39 +120,39 @@ possibility.
   record rather than entered by hand. (Restates 0001 FR-008.)
 - **FR-009**: Trademark and other generated registers MUST follow the same
   rule as FR-008: generated from the primary source, not hand-typed.
-- **FR-010**: A specific count from any IF IP register, when it appears in
+- **FR-010**: A specific count from any IF Research & IP register, when it appears in
   a document outside the live register itself, MUST be date-stamped and
   named by register, per `context/registers.md`.
 
 **Commercialization gate**
 
-- **FR-011**: IF IP MUST NOT treat a granted patent, by itself, as
+- **FR-011**: IF Research & IP MUST NOT treat a granted patent, by itself, as
   sufficient reason to build, fund, license, or sell anything. Clean
   title, useful scope, freedom to operate, an identified customer, and
   financeable terms are all required before a right earns a commercial
   commitment.
 - **FR-012**: Before choosing a commercialization path for a right (build,
-  license, sell, partner, publish, maintain, narrow, or abandon), IF IP
+  license, sell, partner, publish, maintain, narrow, or abandon), IF Research & IP
   MUST answer the commercial questions: what problem the right solves now,
   who has authority and budget to care, what is owned or still needs
   verifying, and whether the right can be made more valuable first.
 
 **Turning research into usable products (IPLG)**
 
-- **FR-013**: A tool, prompt, or piece of content IF IP builds to make its
+- **FR-013**: A tool, prompt, or piece of content IF Research & IP builds to make its
   research usable MUST be evaluated against the Native Alpha test the same
   as anything else; widely available AI capability alone MUST NOT be
   presented as Native Alpha.
 - **FR-014**: Executable content (a prompt, worksheet, assessment, or
-  scorecard) MUST let a reader complete a first useful action before IF IP
+  scorecard) MUST let a reader complete a first useful action before IF Research & IP
   asks for a commercial commitment; the first useful action MUST NOT be
   gated behind a purchase or contact request.
 
 **Outside disclosures and AI's role**
 
-- **FR-015**: IF IP MUST respond to an outside invention disclosure within
+- **FR-015**: IF Research & IP MUST respond to an outside invention disclosure within
   ten business days of receiving a non-confidential summary of it.
-- **FR-016**: IF IP MUST delete unsolicited confidential material unread
+- **FR-016**: IF Research & IP MUST delete unsolicited confidential material unread
   rather than review it.
 - **FR-017**: AI MUST NOT be treated as having decided inventorship,
   ownership, patentability, claim meaning, enforceability, freedom to
@@ -164,7 +164,7 @@ possibility.
 
 **IP's real output**
 
-- **FR-019**: IF IP's primary output MUST be treated as a sharpened
+- **FR-019**: IF Research & IP's primary output MUST be treated as a sharpened
   question, thesis, or insight — not "intellectual property." A patent,
   defensive disclosure, or trademark is a byproduct that sometimes
   follows once a thesis is worth protecting, not the goal research was
@@ -176,7 +176,7 @@ possibility.
 
 **Shared services**
 
-- **FR-021**: IF IP MUST route its legal, finance, compliance, and general
+- **FR-021**: IF Research & IP MUST route its legal, finance, compliance, and general
   operations needs through the company-wide shared-services layer rather
   than building its own internal team for one of these functions.
   (Restates 0001 FR-028.)
@@ -195,10 +195,10 @@ possibility.
 - **Trademark** — a federal or common-law mark, tracked as its own kind of
   right.
 - **Trade secret** — a right protected by not disclosing it at all.
-- **License** — what a counterparty can take on a right IF IP holds.
+- **License** — what a counterparty can take on a right IF Research & IP holds.
 - **The patent register** (and the other generated registers) — public,
   USPTO-sourced, defined in `context/registers.md`.
-- **IPLG (Intellectual Product-Led Growth)** — IF IP's model for turning
+- **IPLG (Intellectual Product-Led Growth)** — IF Research & IP's model for turning
   research into something a reader can use directly, summarized in
   `context/units/ip.md`.
 - **Executable content** — a prompt, worksheet, assessment, or scorecard
@@ -227,15 +227,15 @@ possibility.
   confidential material is reviewed rather than deleted.
 - **SC-007**: No AI-amplified tool or content is presented as Native Alpha
   on the strength of the AI capability alone.
-- **SC-008**: IF IP has no internal legal, finance, or compliance team of
+- **SC-008**: IF Research & IP has no internal legal, finance, or compliance team of
   its own — those functions are rented, shared with the other four units.
 
 ## Out of scope
 
 - The commercialization decision itself (build vs. license vs. sell) is
   IF Studios' and IF Capital's to make, per their own charters — this spec
-  only requires that IF IP answer the commercial questions before that
-  decision gets made, not that IF IP makes it.
+  only requires that IF Research & IP answer the commercial questions before that
+  decision gets made, not that IF Research & IP makes it.
 - Patent prosecution mechanics (claims drafting, office action response,
   outside counsel selection) are operational detail, not spec-level.
 - The USPTO sync pipeline's implementation lives in the website repository,
@@ -249,9 +249,9 @@ possibility.
 
 ## Open questions
 
-- **OQ-1**: No individual IF IP lead is named, distinct from Shahid N.
+- **OQ-1**: No individual IF Research & IP lead is named, distinct from Shahid N.
   Shah. This is now tracked company-wide as OQ-5 on
-  `0001-intellectual-frontiers` rather than as an IF IP-specific question —
+  `0001-intellectual-frontiers` rather than as an IF Research & IP-specific question —
   it applies identically to every unit, not just this one.
 - **OQ-2**: No rule resolves which research pillar owns the disposition
   decision when two pillars produce overlapping findings.

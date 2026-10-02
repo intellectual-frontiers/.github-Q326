@@ -22,7 +22,7 @@ test in different places.
 
 | Unit | What it does |
 | --- | --- |
-| [**IP**](https://intellectualfrontiers.com/ip) | Holds and licenses the patent and trademark portfolio; runs Defensive Disclosures. |
+| [**Research & IP**](https://intellectualfrontiers.com/ip) | Runs the research, then protects and commercializes what it produces: patents, trademarks, Defensive Disclosures, and licenses. |
 | [**Press**](https://intellectualfrontiers.com/press) | Publishes the books, essays, and research that make the work legible. |
 | [**Capital**](https://intellectualfrontiers.com/capital) | Puts money behind evidence, on the same terms for internal and outside deal flow. |
 | [**Studios**](https://intellectualfrontiers.com/studios) | Decides which companies should exist and proves them with the least waste. |

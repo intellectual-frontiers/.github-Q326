@@ -198,11 +198,11 @@ resolved here.
   stays harder than the thesis allows; the opportunity conflicts with a
   mandate; or the next dollar or month buys activity, not evidence).
 
-**IF IP**
+**IF Research & IP**
 
-- **FR-006**: IF IP MUST NOT imply a registration or ownership position
+- **FR-006**: IF Research & IP MUST NOT imply a registration or ownership position
   that the underlying record does not support.
-- **FR-007**: IF IP MUST give every protectable research finding an
+- **FR-007**: IF Research & IP MUST give every protectable research finding an
   explicit disposition — patent, defensive disclosure, trade secret, or no
   action — no later than whichever comes first: a paper or note describing
   the finding being published, or the priority-date deadline of any
@@ -317,8 +317,8 @@ resolved here.
 
 - **Intellectual Frontiers LLC** — the parent: brand owner, unit
   organizer, and contracting party unless another entity is named.
-- **The five units** — IP (runs research, protects and commercializes what
-  it produces), Press (understands markets, explains the truth clearly),
+- **The five units** — Research & IP (runs research, protects and
+  commercializes what it produces), Press (understands markets, explains the truth clearly),
   Capital (puts money behind evidence with discipline), Studios (builds the
   companies that should exist), Network (finds and proves the people who
   can carry the work). Full charters: [`context/units/`](../../../context/units).

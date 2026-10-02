@@ -23,6 +23,18 @@
 > added directly by Shahid N. Shah the same day, for the same reason.
 > "How Press keeps them current" below was added directly by Shahid N.
 > Shah the same day, for the same reason.
+>
+> **Reconciled with Lovable commit `5688cba` on 2026-10-01.** The unit's
+> short question and role (in `context/company.md`, "Operating
+> proposition"), the book count and the paragraph on other major works
+> (AI Slop Check) under "What Press has published," and "Events and
+> partnerships" below now track
+> `src/content/operating-model.ts`, `src/content/books.ts` with
+> `src/content/works/books/*.ts`, `src/routes/press/about.tsx`,
+> `src/routes/press/index.tsx`, and
+> `src/content/works/software/ai-slop-check.ts` at that commit, which is
+> newer than the `adf0aef` text above. The sections the notes above credit
+> to Shahid N. Shah directly (2026-09-14 onward) were not touched.
 
 **Job:** Understand markets and explain the truth clearly.
 
@@ -128,8 +140,12 @@ relationship, carried the rest of the way.
 
 ## What Press has published
 
-Four Shahid Shah Fieldbooks carry the Intellectual Frontiers Press
-imprint:
+Shahid Shah Fieldbooks carry the Intellectual Frontiers Press imprint. The
+four below were the imprint at the first distillation. The books register on
+the website now lists many more, one of them still forthcoming at commit
+`5688cba`. The register, not this file, is where the current list belongs,
+for the same reason `context/registers.md` gives for patent counts. The
+four first titles:
 
 | Book | What it argues |
 | --- | --- |
@@ -144,6 +160,30 @@ video for decision-makers, a patent summary written so a licensee or
 procurement officer can judge what a family covers without hiring counsel
 first.
 
+A major work for Press is not limited to books. It can be an entire
+website, a piece of software that lets people practice a deeper idea, an
+event that puts the idea in a room, or any other work that shapes how an
+audience thinks or behaves. The first software of that kind is **AI Slop
+Check**, a free browser tool that turns a few answers about a business
+document into a review prompt scoring how much of the document is specific,
+evidenced, and useful and how much could have been written for any company.
+Nothing entered is stored or sent, and no AI call runs on the firm's side.
+
+## Events and partnerships
+
+When a concept from a Press book, or from the research behind one, or
+software the firm created earns real traction with practitioners, the next
+place it goes may be a stage. Press does not build an event arm of its own.
+It partners with people who already know how to fill a room and run a
+program, and shows up as the thought leadership rather than the logistics.
+The partner owns the venue, ticketing, marketing, and operation; Press
+brings the ideas and the talk. Every talk is held to the same editorial bar
+as the book: no slide goes in front of an audience that would not pass in
+print. Current partners named on the website are HealthIMPACT, a healthcare
+leadership event series co-founded and run in partnership with Purpose
+Events, and a recurring speaking partnership with the Actionable
+Intelligence Network.
+
 ## Founder writing
 
 Shahid Shah's own writing, published externally rather than on
@@ -153,7 +193,7 @@ feed rather than reproduced. Each piece carries one of four types —
 Journalist** — and may belong to a named series (for example, "Native
 Alpha"). A recurring editorial thread runs through this writing: framing
 AI in terms of which entirely new kinds of work become possible, not
-hours saved — used deliberately to make the case for the inventions IF IP
+hours saved — used deliberately to make the case for the inventions IF Research & IP
 holds. That framing still has to clear FR-003 and FR-002 below: the
 advantage argued for has to be real, and the argument can't cover for
 weak evidence.

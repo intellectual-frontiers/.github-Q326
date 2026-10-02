@@ -20,6 +20,16 @@
 > "The rule" below were added directly by Shahid N. Shah on 2026-09-14, not
 > distilled from any website content — see the constitution's amendment
 > note.
+>
+> **Reconciled with Lovable commit `5688cba` on 2026-10-01.** The unit's
+> short question and role (in `context/company.md`, "Operating
+> proposition"), the extra sentences in "Capital as a search function" and
+> "The rule," the new "Seed and early-capital readiness" section, and one
+> correction to the Fund II build clock now track
+> `src/content/operating-model.ts`, `src/routes/capital/index.tsx`,
+> `src/routes/capital/seed-readiness.tsx`, and
+> `src/routes/capital/care-delivery-fund-ii.tsx` at that commit, which is
+> newer than the text above.
 
 **Job:** Put money behind evidence with discipline.
 
@@ -74,7 +84,10 @@ Intellectual Frontiers created it, either — self-origination earns no
 pass on the underwriting standard.
 
 **Evidence Capital produces:** underwriting, economics, committed capital,
-governance, and learning.
+governance, and learning. That includes a clear account of what the founder,
+customer, co-investor, or limited partner taught the thesis: capital-market
+evidence returns to the shared record instead of ending with the
+transaction.
 
 **Boundary:** Studio activity does not justify investment, and investment
 does not prove product-market fit — see the constitution's unit-boundary
@@ -90,6 +103,12 @@ their Native Alpha is credible, and their evidence is better than ours,
 there's no need to build a competing company. Backing them is a better
 use of Capital than building just because we can.
 
+Some of the best opportunities originate outside Intellectual Frontiers. A
+founder may bring a thesis the firm never considered, independently reach a
+similar conclusion, or have a better execution path. The question is not who
+thought of it first. The question is where capital can support the strongest
+expression of the idea.
+
 That reframes what "evidence" means for Capital before it ever writes a
 check: talking to a founder is evidence. Comparing their assumptions to
 ours is evidence. Seeing how much traction they've already earned is
@@ -99,6 +118,32 @@ problem longer, backing them is a feature of good judgment, not a failure
 of originality. Studios becomes especially important only once this
 search comes up empty and the evidence still holds — see the
 constitution's search-before-build principle.
+
+## Seed and early-capital readiness
+
+Capital can speed up something that already works. It cannot manufacture a
+repeatable way to turn strangers into paying customers. Before a funding
+conversation, one question matters: can the founder point to a specific
+sequence, from outreach through payment, that turned a stranger into a paying
+customer more than once, without a relationship only the founder has? If yes,
+capital may buy speed. If no, capital mostly buys more time to look for the
+motion.
+
+In healthcare, a pilot, a letter of intent, or a warm introduction is not the
+same as a repeatable sale. Institutional buying does not move faster because
+a vendor raised a round, so the company has to traverse the real buying path,
+reach payment, and do it again; the user, approver, purchaser, payer, and
+economic beneficiary have to be named separately. One team can also still be
+testing several businesses at once: each product with its own buyer, budget,
+and sales motion needs its own proof, and early interest in one does not
+validate the others. The test is to pick the one with a named buyer and a
+named budget it can displace, and prove that business first. Proof is cheaper
+than it used to be, but that makes the first answer faster to get, not
+untested demand more investable: raise to accelerate a demonstrated
+constraint, not to postpone finding out whether a business exists.
+
+The website carries this as a browser-only assessment at `/capital/seed-readiness`
+that produces a decision record the founder can inspect, copy, and keep.
 
 ## Capital sources
 
@@ -134,12 +179,15 @@ opportunities don't.
 better end-to-end patient and caregiver experience. That's a qualifying
 condition, not a nice-to-have.
 
-**The build gate:** before Fund II incorporates a company under its
-"build" mode, the operating model, the target buyer, the contract
-chassis, and the unit economics have to be settled. If they cannot be
-settled, the build does not start. Once it does, there's a clock: design
-partners inside 60 days, a first clinical workflow live by 120, first
-revenue by 180.
+**The build gate:** a build starts when three things line up in the
+evidence: a sized gap in the data, a reimbursement opening, and a workflow
+redesign that AI has only just made possible. Before Fund II incorporates a
+company under its "build" mode, the operating model, the target buyer, the
+contract chassis, and the unit economics have to be settled. If they cannot
+be settled, the build does not start. Once it does, the clock is 90 to 180
+days: design partners approached in the first 60, the first clinical
+workflow live by 120, first revenue in sight by 180, and a clinician CEO
+paired in rather than recruited afterward.
 
 **What Fund II is not:** a traditional venture capital fund, a private
 equity fund, an accelerator, an incubator, a consulting firm, or a

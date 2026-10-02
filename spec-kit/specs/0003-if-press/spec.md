@@ -222,7 +222,7 @@ the work is aimed at that company eventually not needing Press at all.
   defined in `context/company.md`.
 - **The voice principles** — evidence-led, practical, skeptical, plain,
   defined in `context/brand.md`.
-- **A Fieldbook** — one of the four named books carrying the Intellectual
+- **A Fieldbook** — one of the named books carrying the Intellectual
   Frontiers Press imprint, each with its own thesis and named frameworks.
 - **Founder writing** — Shahid Shah's own writing, published externally
   and curated into the portfolio by type (Contrarian Brief, Design

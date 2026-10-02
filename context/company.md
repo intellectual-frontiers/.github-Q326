@@ -20,6 +20,14 @@
 > Distilled from `src/content/corporate.ts` at commit `6260a3b` of
 > `intellectual-frontiers/www.intellectualfrontiers.com-aiw-lovable`
 > (2026-09-13), the last point this text was copied from.
+>
+> **Reconciled 2026-10-01** with Lovable commit `5688cba`: the unit's name
+> in "What each unit asks" (`corporate.ts`, `unitQuestions`) and the new
+> "Operating proposition" section below (`src/content/operating-model.ts`,
+> added to the website on 2026-09-14, after the `6260a3b` text). The
+> registry facts in "Corporate facts" are deliberately not reconciled: the
+> website still shows them as awaiting verification, and this file's
+> 2026-09-14 SDAT check is newer.
 
 ## Opening statement
 
@@ -73,7 +81,7 @@ below.
 
 | Unit | Path | Question |
 | --- | --- | --- |
-| Intellectual Frontiers IP | `/ip` | What do we know, own, control, or have rights to that may create unusual advantage? |
+| Intellectual Frontiers Research & IP | `/ip` | What do we know, own, control, or have rights to that may create unusual advantage? |
 | Intellectual Frontiers Press | `/press` | What do we understand that is worth making clearer, more useful, and more durable? |
 | Intellectual Frontiers Capital | `/capital` | What advantage is strong enough that scarce capital should be placed behind it? |
 | Intellectual Frontiers Studios | `/studios` | What venture should we create to exploit this advantage, and what is the cheapest credible path to proving whether it deserves to exist? |
@@ -83,6 +91,34 @@ Full unit charters live in [`context/units/`](units/). Terms used across
 this file and the unit charters (Native Alpha, the decision checkpoint,
 IPLG, a hunt, and the rest) are defined once in
 [`context/glossary.md`](glossary.md).
+
+## Operating proposition
+
+Intellectual Frontiers is a think tank that builds things. It turns unusual
+ideas into publications, intellectual property, software, companies, and
+investments.
+
+Each unit also has a short question, a role, and the evidence it looks for.
+These are the operating-model wording the website uses beside the longer
+questions above:
+
+| Unit | Question | Role | Evidence |
+| --- | --- | --- | --- |
+| Intellectual Frontiers Research & IP | What might be true? | Turns observations into better questions, stronger theses, defensible insights, and tests. A patent is useful evidence, but it does not prove demand. | Research, technical distinctions, rights, and disconfirming findings |
+| Intellectual Frontiers Press | Can anyone understand and use it? | Makes a thesis inspectable, then tests it through attention, criticism, adoption, and willingness to pay. | Reader response, changed language, practical use, and paid demand |
+| Intellectual Frontiers Capital | Should another dollar move? | Tests the economics and searches for founders already pursuing the thesis. When someone else is better positioned, Capital can back them instead of rebuilding their work. | Underwriting, founder traction, capital interest, governance, and downside |
+| Intellectual Frontiers Studios | What is the cheapest useful test? | Builds an experiment when the evidence remains compelling and no better-positioned builder exists. A company is one possible result, not the starting instruction. | Customer behavior, usage, payment, renewal, and repeatable economics |
+| Intellectual Frontiers Network | Who should we find, and why now? | Connects every unit to founders, operators, customers, experts, partners, and investors. Finding that someone else is already doing the work can be the most valuable result. | Conversations, worked trials, introductions, capability, and absence |
+
+**The decision at the end of every pass:** continue, change, back someone
+else, build it ourselves, or stop. This is the constitution's decision
+checkpoint (§6).
+
+**What the result may be:** a publication, a patent or license, a
+partnership, an investment in somebody else, a small experiment, software, a
+new company, continued research, or a decision to stop. The firm does not
+manufacture activity; it improves the decision about which form the evidence
+supports.
 
 ## Unit boundaries
 
